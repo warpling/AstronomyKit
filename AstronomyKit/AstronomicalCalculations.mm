@@ -128,10 +128,10 @@
     return NULL;
 }
 
-+ (NSPoint)solarPositionHorizontalWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location {
++ (NSArray*)solarPositionHorizontalWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location {
     double julianDate = [self julianDateWithDate:date];
     CAA2DCoordinate solarPositionHorizontal = [self solarCoordinatesHorizontalWithJulianDate:julianDate latitude:location.latitude longitude:-location.longitude];
-    return NSPointMake(solarPositionHorizontal.X, solarPositionHorizontal.Y);
+    return @[solarPositionHorizontal.X, solarPositionHorizontal.Y];
 }
 
 #pragma mark - Private

@@ -128,6 +128,11 @@
     return NULL;
 }
 
++ (CAA2DCoordinate)solarPositionHorizontalWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location {
+    double julianDate = [self julianDateWithDate:date];
+    CAA2DCoordinate solarPositionHorizontal = [self solarCoordinatesHorizontalWithJulianDate:julianDate latitude:location.latitude longitude:-location.longitude];
+    return solarPositionHorizontal;
+}
 
 #pragma mark - Private
 
@@ -199,6 +204,14 @@
     double beta = CAASun::ApparentEclipticLatitude(terestrialTime, true);
     double epsilon = CAANutation::TrueObliquityOfEcliptic(terestrialTime);
     return CAACoordinateTransformation::Ecliptic2Equatorial(lambda, beta, epsilon);
+}
+
++ (CAA2DCoordinate)solarCoordinatesHorizontalWithJulianDate:(double)julianDate {
+    double terestrialTime = CAADynamicalTime::UTC2TT(julianDate);
+    double lambda = CAASun::ApparentEclipticLongitude(terestrialTime, true);
+    double beta = CAASun::ApparentEclipticLatitude(terestrialTime, true);
+    double epsilon = CAANutation::TrueObliquityOfEcliptic(terestrialTime);
+    return CAACoordinateTransformation::Ecliptic2Horizontal(lambda, beta, epsilon);
 }
 
 + (CAARiseTransitSetDetails)solarRiseTransitSetWithJulianDate:(double)julianDate latitude:(double)latitude longitude:(double)longitude {

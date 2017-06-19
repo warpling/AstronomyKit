@@ -75,4 +75,10 @@
 /// @param location: The location to query.
 + (nullable NSDate *)solarSetDateWithDate:(nonnull NSDate *)date location:(CLLocationCoordinate2D)location;
 
+///  Ask where the sun will be in horizontal coordinates (azimuth, altitude) in the given date and location.
+///
+/// @param date: The date to query.
+/// @param location: The location to query.
++ (CAA2DCoordinate)solarPositionHorizontalWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location;
+
 @end

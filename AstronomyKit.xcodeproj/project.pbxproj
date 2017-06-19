@@ -237,7 +237,7 @@
 		3BC040391D9C2BF400DF3419 /* AAVSOP87E_VEN.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BC03F561D9C2BF400DF3419 /* AAVSOP87E_VEN.h */; };
 		3BC0403C1D9C2BF400DF3419 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3BC03F591D9C2BF400DF3419 /* stdafx.cpp */; };
 		3BC0403D1D9C2BF400DF3419 /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BC03F5A1D9C2BF400DF3419 /* stdafx.h */; };
-		3BE052EC1B96429800CC8DF0 /* AstronomyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE052E01B96429800CC8DF0 /* AstronomyKit.framework */; };
+		3BE052EC1B96429800CC8DF0 /* .framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE052E01B96429800CC8DF0 /* .framework */; };
 		3BE052F31B96429800CC8DF0 /* AstronomyKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE052F21B96429800CC8DF0 /* AstronomyKitTests.m */; };
 		3BE053FD1B96434A00CC8DF0 /* AstronomicalCalculations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE053F81B96434A00CC8DF0 /* AstronomicalCalculations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BE053FE1B96434A00CC8DF0 /* AstronomicalCalculations.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BE053F91B96434A00CC8DF0 /* AstronomicalCalculations.mm */; };
@@ -283,8 +283,8 @@
 		3ADE0BD71C643773003AA2BF /* watchOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Base.xcconfig"; sourceTree = "<group>"; };
 		3ADE0BD81C643773003AA2BF /* watchOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Framework.xcconfig"; sourceTree = "<group>"; };
 		3ADE0BD91C643773003AA2BF /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
-		3B9560BE1D9CB5CC0037618E /* AstronomyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AstronomyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B9560CC1D9CB6620037618E /* AstronomyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AstronomyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9560BE1D9CB5CC0037618E /* AstronomyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AstronomyKit.framework; path = .framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9560CC1D9CB6620037618E /* AstronomyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AstronomyKit.framework; path = .framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9560D61D9CB6980037618E /* AstronomyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AstronomyKit.h; sourceTree = "<group>"; };
 		3B9560D71D9CB6980037618E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B9560D91D9CB6980037618E /* AstronomyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AstronomyKit.h; sourceTree = "<group>"; };
@@ -518,7 +518,7 @@
 		3BC03F581D9C2BF400DF3419 /* naughter.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = naughter.css; sourceTree = "<group>"; };
 		3BC03F591D9C2BF400DF3419 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
 		3BC03F5A1D9C2BF400DF3419 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
-		3BE052E01B96429800CC8DF0 /* AstronomyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AstronomyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE052E01B96429800CC8DF0 /* .framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = .framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE052EB1B96429800CC8DF0 /* AstronomyKit-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AstronomyKit-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE052F11B96429800CC8DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BE052F21B96429800CC8DF0 /* AstronomyKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AstronomyKitTests.m; sourceTree = "<group>"; };
@@ -555,7 +555,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BE052EC1B96429800CC8DF0 /* AstronomyKit.framework in Frameworks */,
+				3BE052EC1B96429800CC8DF0 /* .framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,7 +963,7 @@
 		3BE052E11B96429800CC8DF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3BE052E01B96429800CC8DF0 /* AstronomyKit.framework */,
+				3BE052E01B96429800CC8DF0 /* .framework */,
 				3BE052EB1B96429800CC8DF0 /* AstronomyKit-Tests.xctest */,
 				3B9560BE1D9CB5CC0037618E /* AstronomyKit.framework */,
 				3B9560CC1D9CB6620037618E /* AstronomyKit.framework */,
@@ -1192,7 +1192,7 @@
 			);
 			name = "AstronomyKit-iOS";
 			productName = AstronomyKit;
-			productReference = 3BE052E01B96429800CC8DF0 /* AstronomyKit.framework */;
+			productReference = 3BE052E01B96429800CC8DF0 /* .framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3BE052EA1B96429800CC8DF0 /* AstronomyKit-iOS-Tests */ = {

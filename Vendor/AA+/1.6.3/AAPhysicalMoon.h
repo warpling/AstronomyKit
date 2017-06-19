@@ -86,7 +86,7 @@ public:
   static CAAPhysicalMoonDetails CalculateGeocentric(double JD);
   static CAAPhysicalMoonDetails CalculateTopocentric(double JD, double Longitude, double Latitude);
   static CAASelenographicMoonDetails CalculateSelenographicPositionOfSun(double JD, bool bHighPrecision);
-  static double AzimuthOfSun(double JD, double Longitude, double Latitude, bool bHighPrecision)
+  static double AzimuthOfSun(double JD, double Longitude, double Latitude, bool bHighPrecision);
   static double AltitudeOfSun(double JD, double Longitude, double Latitude, bool bHighPrecision);
   static double TimeOfSunrise(double JD, double Longitude, double Latitude, bool bHighPrecision);
   static double TimeOfSunset(double JD, double Longitude, double Latitude, bool bHighPrecision);

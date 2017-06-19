@@ -134,6 +134,10 @@
     return @[@(solarPositionHorizontal.X), @(solarPositionHorizontal.Y)];
 }
 
++ (double) solarAzimuthWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location {
+    return CAAPhysicalMoon::AltitudeOfSun(2448724.5, -20, 9.7, false);
+}
+
 #pragma mark - Private
 
 + (double)julianDateWithDate:(NSDate *)date {

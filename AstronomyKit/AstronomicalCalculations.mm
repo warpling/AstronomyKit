@@ -8,7 +8,6 @@
 
 #import "AstronomicalCalculations.h"
 #import "NSCalendar+AstronomyKit.h"
-#import "AA+.h"
 
 @implementation AstronomicalCalculations
 

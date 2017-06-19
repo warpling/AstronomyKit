@@ -14,6 +14,8 @@
     #import <CoreLocation/CoreLocation.h>
 #endif
 
+#import "AA+.h"
+
 @interface AstronomicalCalculations : NSObject
 
 #pragma mark - Lunar calculations

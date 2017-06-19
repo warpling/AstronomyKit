@@ -240,6 +240,27 @@ CAASelenographicMoonDetails CAAPhysicalMoon::CalculateSelenographicPositionOfSun
   return details;
 }
 
+double CAAPhysicalMoon::AzimuthOfSun(double JD, double Longitude, double Latitude, bool bHighPrecision)
+{
+    //Calculate the selenographic details
+    CAASelenographicMoonDetails selenographicDetails = CalculateSelenographicPositionOfSun(JD, bHighPrecision);
+    
+    //convert to radians
+    Latitude = CAACoordinateTransformation::DegreesToRadians(Latitude);
+    Longitude = CAACoordinateTransformation::DegreesToRadians(Longitude);
+    selenographicDetails.b0 = CAACoordinateTransformation::DegreesToRadians(selenographicDetails.b0);
+    selenographicDetails.c0 = CAACoordinateTransformation::DegreesToRadians(selenographicDetails.c0);
+    
+    // b0 = phi
+    // c0 = H
+    
+//    return M_PI + atan2(sin(H), cos(H) * sin(phi) - tan(dec) * cos(phi));
+    
+    double H = (selenographicDetails.c0 + Longitude + 3.14);
+    return CAACoordinateTransformation::RadiansToDegrees(atan2(cos(H),
+                                                               cos(H) * sin(selenographicDetails.b0) - tan(Latitude) * cos(selenographicDetails.b0)) + M_PI);
+}
+
 double CAAPhysicalMoon::AltitudeOfSun(double JD, double Longitude, double Latitude, bool bHighPrecision)
 {
   //Calculate the selenographic details
@@ -250,6 +271,9 @@ double CAAPhysicalMoon::AltitudeOfSun(double JD, double Longitude, double Latitu
   Longitude = CAACoordinateTransformation::DegreesToRadians(Longitude);
   selenographicDetails.b0 = CAACoordinateTransformation::DegreesToRadians(selenographicDetails.b0);
   selenographicDetails.c0 = CAACoordinateTransformation::DegreesToRadians(selenographicDetails.c0);
+
+//    return asin(sin(phi) * sin(dec) + cos(phi) * cos(dec) * cos(H));
+    // H = co + long - π
 
   return CAACoordinateTransformation::RadiansToDegrees(asin(sin(selenographicDetails.b0)*sin(Latitude) + cos(selenographicDetails.b0)*cos(Latitude)*sin(selenographicDetails.c0 + Longitude)));
 }

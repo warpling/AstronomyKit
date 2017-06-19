@@ -82,5 +82,6 @@
 + (nullable NSArray *)solarPositionHorizontalWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location;
 
 + (double) solarAzimuthWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location;
++ (double) solarAltitudeWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location;
 
 @end

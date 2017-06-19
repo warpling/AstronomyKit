@@ -135,7 +135,13 @@
 }
 
 + (double) solarAzimuthWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location {
-    return CAAPhysicalMoon::AltitudeOfSun(2448724.5, -20, 9.7, false);
+    double julianDate = [self julianDateWithDate:date];
+    return CAAPhysicalMoon::AzimuthOfSun(julianDate, location.latitude, location.longitude, false);
+}
+
++ (double) solarAltitudeWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location {
+    double julianDate = [self julianDateWithDate:date];
+    return CAAPhysicalMoon::AltitudeOfSun(julianDate, location.latitude, location.longitude, false);
 }
 
 #pragma mark - Private

@@ -79,6 +79,6 @@
 ///
 /// @param date: The date to query.
 /// @param location: The location to query.
-+ (NSArray*)solarPositionHorizontalWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location;
++ (nullabel NSArray *)solarPositionHorizontalWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location;
 
 @end

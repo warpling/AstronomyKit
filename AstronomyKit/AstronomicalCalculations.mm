@@ -134,10 +134,10 @@
     return @[@(solarPositionHorizontal.X), @(solarPositionHorizontal.Y)];
 }
 
-+ (double) solarAzimuthWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location {
-    double julianDate = [self julianDateWithDate:date];
-    return CAAPhysicalMoon::AzimuthOfSun(julianDate, location.latitude, location.longitude, false);
-}
+//+ (double) solarAzimuthWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location {
+//    double julianDate = [self julianDateWithDate:date];
+//    return CAAPhysicalMoon::AzimuthOfSun(julianDate, location.latitude, location.longitude, false);
+//}
 
 + (double) solarAltitudeWithDate:(NSDate *)date location:(CLLocationCoordinate2D)location {
     double julianDate = [self julianDateWithDate:date];
